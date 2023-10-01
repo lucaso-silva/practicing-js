@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone number gerator</title>
+    <script src="script.js"></script>
+</head>
+<body style="width: 60%; margin: auto;">
+    <h1>Phone number gerator</h1>
+    <p>Write some JavaScript that creates and prints a random phone number of the form XXX–XXXX</p>
+    <ul>
+        <li>Include the dashes in the output</li>
+        <li>For the triple,<strong>XXX</strong>-XXXX. Make the first digit random. If the first
+            digit is 5 or less, count up for the next two digits, otherwise count
+            down
+            <ul>
+                <li>456, 012, 876, 543</li>
+            </ul>
+        </li>
+        <li>For the quadruple, XXX–<strong>XXXX</strong>, it can be any number less than 2500</li>
+    </ul>
+    <button onclick="createPhoneNumber()">Create number</button>
+    <h3>The phone number is:</h3>
+    <h4 id="phone-number"></h4>
+</body>
+</html>
