@@ -16,29 +16,29 @@ function oddArray() {
     document.getElementById("outputOne").innerHTML = "[ " + arrayOdds + " ]"
 }
 
-// function createArray() {
-//     let number = +prompt("Enter the numbers for the array. Enter a negative number to end");
-//     let originalArray = [];
+function createArray() {
+    let number = +prompt("Enter the numbers for the array. Enter a negative number to end");
+    let originalArray = [];
 
-//     do {
-//         originalArray.push(number);
-//         number = +prompt("Enter the numbers for the array. Enter a negative number to end");
+    do {
+        originalArray.push(number);
+        number = +prompt("Enter the numbers for the array. Enter a negative number to end");
 
-//     } while (number > 0);
+    } while (number > 0);
 
-//     document.getElementById("outputTwo-1").innerHTML = "[ " + originalArray + " ]";
+    document.getElementById("outputTwo-1").innerHTML = "[ " + originalArray + " ]";
 
-//     removeOdds(originalArray);
-// }
+    removeOdds(originalArray);
+}
 
-// function removeOdds(array) {
-//     let resultArray = array.slice();
+function removeOdds(array) {
+    let resultArray = [];
 
-//     for(let i = 0; i < array.length; i++) {
-//         if(resultArray[i] % 2 != 0) {
-//             resultArray.splice(resultArray[i], 1);
-//         }
-//     }
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] % 2 == 0) {
+            resultArray.push(array[i]);
+        }
+    }
 
-//     document.getElementById("outputTwo-2").innerHTML = "[" + resultArray + "]";
-// }
+    document.getElementById("outputTwo-2").innerHTML = "[" + resultArray + "]";
+}
