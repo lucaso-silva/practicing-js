@@ -26,19 +26,26 @@ function createArray() {
 
     } while (number > 0);
 
-    document.getElementById("outputTwo-1").innerHTML = "[ " + originalArray + " ]";
+    document.getElementById("outputTwo-1").innerHTML = "Original array was [ " + originalArray + " ]";
 
     removeOdds(originalArray);
 }
 
 function removeOdds(array) {
-    let resultArray = [];
-
+    //modifing the original array:
     for(let i = 0; i < array.length; i++) {
-        if(array[i] % 2 == 0) {
-            resultArray.push(array[i]);
+        if(array[i] % 2 != 0) {
+            array.splice(i, 1);
+            i--;
         }
     }
-
-    document.getElementById("outputTwo-2").innerHTML = "[" + resultArray + "]";
+    
+    //creating a new array:
+    // let resultArray = [];
+    // for(let i = 0; i < array.length; i++) {
+    //     if(array[i] % 2 == 0) {
+    //         resultArray.push(array[i]);
+    //     }
+    // }
+    document.getElementById("outputTwo-2").innerHTML = "The new array is [" + array + "]";
 }
